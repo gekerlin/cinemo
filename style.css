@@ -371,6 +371,7 @@ nav.scrolled {
 
   .search-form input {
     display: flex;
+    padding: 20px;
   }
 
   .nav .search-form {
