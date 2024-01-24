@@ -281,7 +281,37 @@ nav.scrolled {
   display: none;
 }
 
+/* Navbar search form */
+.nav .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 85%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .search-form input {
+  width: 90%;
+  height: 70%;
+}
+
 /* Perubahan layar */
+/* Laptop */
+@media (max-width: 2000px) {
+  .search-form input {
+    display: none;
+  }
+
+  .nav .search-form {
+    display: none;
+  }
+
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .nav-items a {
@@ -289,7 +319,7 @@ nav.scrolled {
   }
 
   .search-box {
-    width: 8%;
+    width: 15%;
     display: flex;
     justify-content: right;
   }
@@ -297,12 +327,18 @@ nav.scrolled {
   .btn-login {
     margin-top: 9px;
   }
+
+  .nav img {
+    width: 100px;
+    height: 100px;
+  }
+
 }
 
 /* Mobile Phone*/
 @media (max-width: 700px) {
   .nav-items a {
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .nav-links {
@@ -316,15 +352,48 @@ nav.scrolled {
   }
 
   .icons {
-    padding: 2px;
     color: black;
-    display: inline-block;
-    margin-top: 15px;
+    display: flex;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
   }
 
   .icons:hover {
     color: red;
     transition: color 0.2s ease-in-out;
+  }
+
+  .nav img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .search-form input {
+    display: flex;
+  }
+
+  .nav .search-form {
+    display: flex;
+  }
+
+  .nav .search-form {
+    border-radius: 5px 5px 5px 5px;
+    position: absolute;
+    top: -100%;
+    right: 0%;
+    background-color: #fff;
+    width: 100%;
+    height: 10%;
+    transition: 0.3s;
+  }
+
+  .nav .search-form.active {
+    top: 0;
+  }
+
+  .search-form {
+    z-index: 1000;
   }
 
 }
