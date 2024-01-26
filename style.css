@@ -161,31 +161,24 @@ nav.scrolled {
   object-fit: cover;
 }
 
-.love-icon {
-  position: absolute;
-  top: 0px;
-  right: 5px;
-  font-size: 20px;
-  color: black;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.love-icon.active {
-  color: red;
-}
-
-.title {
+.title,
+.title1,
+.title2 {
   color: black;
   opacity: 0.9;
   padding-left: 4%;
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 500;
-  margin-top: -10px;
+  margin-top: 5px;
+}
+
+.title1 {
+  margin-top: 10px;
+}
+
+.title2 {
+  margin-top: 50px;
 }
 
 .movie-list {
@@ -250,10 +243,10 @@ nav.scrolled {
 
 .name {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: capitalize;
-  margin-top: 60%;
+  margin-top: 40%;
 }
 
 .des {
@@ -263,6 +256,39 @@ nav.scrolled {
   font-weight: 500;
   font-size: 12px;
 }
+
+.watchlist{
+  position: absoulute;
+  width: 100%;
+  text-transform: capitalize;
+  border: none;
+  font-size: 10px;
+  text-align: center;
+  color: black;
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-bottom: 20%;
+}
+
+.watchlist::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  background-image: url(file-plus.svg);
+  background-size: cover;
+  transform: scale();
+}
+
+.watchlist:hover{
+  color: red;
+  background: rgba(225, 225, 225, 225, 0.1);
+}
+
 
 
 /* Sujana EDIT */
@@ -400,4 +426,39 @@ nav.scrolled {
 
 }
 
-/* ..... */
+.wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  margin: auto;
+  display: flex;
+  bottom: -90px;
+}
+
+.img-wrapper {
+  max-width: 120px;
+  max-height: 250px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px gray;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.img-circle-wrapper {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.circle-title {
+  position: absolute;
+  bottom: 0;
+  margin-top: 10px;
+}
+
+
+
